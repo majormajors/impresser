@@ -6,8 +6,8 @@ module Presser
     has_many :user_metas
     has_many :links, :foreign_key => "link_owner"
     
-    # def readonly?
-    #   true
-    # end
+    def readonly?
+      true
+    end
   end
 end
