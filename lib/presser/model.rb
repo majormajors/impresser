@@ -4,6 +4,8 @@ if defined? ActiveRecord
 #   require "presser/model/data_mapper"
 # elsif defined? Sequel
 #   require "presser/model/sequel"
-elsif
+else
   raise LoadError, "You don't have a supported ORM loaded."
 end
+
+Presser.load_models
