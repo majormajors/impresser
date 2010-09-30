@@ -5,7 +5,7 @@ module Presser
   #
   # @param [String] orm The ORM for which you want to load models
   def self.load_models_for(orm)
-    Models.each{ |model| require File.join("presser","model", orm, model) }
+    Models.each{ |model| require File.join("presser","model", orm.to_s, model) }
   end
 end
 

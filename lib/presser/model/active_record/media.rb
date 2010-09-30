@@ -1,5 +1,7 @@
 module Presser
-  class Media < PostBase
+  module ActiveRecord
+    class Media < PostBase
     
+    end
   end
 end
