@@ -1,0 +1,1 @@
+Presser.load_models_for(:datamapper)
