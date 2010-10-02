@@ -4,9 +4,10 @@ require "ostruct"
 
 module Presser
   Config = OpenStruct.new({
-    :table_prefix => "wp_",
+    :table_name_prefix => "wp_",
     :repository => :default
   }) unless defined? self::Config
 end
 
+require "presser/railtie" if defined? ::Rails
 require "presser/model"
