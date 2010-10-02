@@ -16,5 +16,5 @@ elsif defined? ::DataMapper
 elsif defined? ::Sequel
   require "presser/model/sequel"
 else
-  raise LoadError, "You don't have a supported ORM loaded."
+  raise Presser::NoOrmError, "You don't have a supported ORM loaded."
 end

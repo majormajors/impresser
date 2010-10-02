@@ -9,5 +9,6 @@ module Presser
   }) unless defined? self::Config
 end
 
+require "presser/exceptions"
 require "presser/railtie" if defined? ::Rails
 require "presser/model"
