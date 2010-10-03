@@ -5,11 +5,13 @@ module Presser
   #
   # @param [String] orm The ORM for which you want to load models
   def self.load_models_for(orm)
-    Models.each{ |model| require File.join("presser","model", orm.to_s, model) }
+    Models.each{ |model| require File.join("presser", "model", orm.to_s, model) }
   end
 end
 
-if defined? ::ActiveRecord
+if %w(active_record data_mapper sequel).include?(Presser::Config[:orm].to_s)
+  require "presser/model/#{Presser::Config[:orm]}"
+elsif defined? ::ActiveRecord
   require "presser/model/active_record"
 elsif defined? ::DataMapper
   require "presser/model/data_mapper"
