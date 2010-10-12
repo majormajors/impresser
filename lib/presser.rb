@@ -1,5 +1,7 @@
 $: << File.expand_path(File.dirname(__FILE__))
 
+require "presser/exceptions"
+
 module Presser
   Config = {
     :table_name_prefix => "wp_",
@@ -13,5 +15,4 @@ module Presser
   end
 end
 
-require "presser/exceptions"
 require "presser/railtie" if defined? ::Rails
