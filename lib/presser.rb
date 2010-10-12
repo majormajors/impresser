@@ -1,7 +1,5 @@
 $: << File.expand_path(File.dirname(__FILE__))
 
-require "ostruct"
-
 module Presser
   Config = {
     :table_name_prefix => "wp_",
