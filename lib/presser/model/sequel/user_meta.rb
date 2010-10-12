@@ -1,6 +1,6 @@
 module Presser
   module Sequel
-    class UserMeta < Sequel::Model
+    class UserMeta < ::Sequel::Model
       
     end
   end

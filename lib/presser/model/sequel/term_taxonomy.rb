@@ -1,6 +1,6 @@
 module Presser
   module Sequel
-    class TermTaxonomy < Sequel::Model
+    class TermTaxonomy < ::Sequel::Model
       
     end
   end

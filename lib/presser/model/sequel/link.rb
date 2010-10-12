@@ -1,6 +1,6 @@
 module Presser
   module Sequel
-    class Link < Sequel::Model
+    class Link < ::Sequel::Model
       
     end
   end

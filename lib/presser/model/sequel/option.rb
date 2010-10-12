@@ -1,6 +1,6 @@
 module Presser
   module Sequel
-    class Option < Sequel::Model
+    class Option < ::Sequel::Model
       
     end
   end

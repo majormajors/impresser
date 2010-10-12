@@ -1,6 +1,6 @@
 module Presser
   module Sequel
-    class PostBase < Sequel::Model
+    class PostBase < ::Sequel::Model
       
     end
   end

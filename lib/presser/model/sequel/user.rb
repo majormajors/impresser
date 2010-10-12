@@ -1,6 +1,6 @@
 module Presser
   module Sequel
-    class User < Sequel::Model
+    class User < ::Sequel::Model
       
     end
   end

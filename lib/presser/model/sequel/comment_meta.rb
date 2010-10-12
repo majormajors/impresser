@@ -1,6 +1,6 @@
 module Presser
   module Sequel
-    class CommentMeta < Sequel::Model
+    class CommentMeta < ::Sequel::Model
       
     end
   end

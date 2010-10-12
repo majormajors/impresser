@@ -1,6 +1,6 @@
 module Presser
   module Sequel
-    class TermRelationship < Sequel::Model
+    class TermRelationship < ::Sequel::Model
       
     end
   end
