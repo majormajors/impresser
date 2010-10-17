@@ -1,7 +1,7 @@
 module Presser
   module ActiveRecord
     class PostBase < Base
-      set_table_name table_name_prefix + "posts"
+      set_table_name "posts"
       set_primary_key "ID"
       set_inheritance_column "post_type"
       has_many :comments, :foreign_key => "comment_post_ID"
