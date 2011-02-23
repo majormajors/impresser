@@ -1,10 +1,12 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    mysql2 (0.2.4)
+    mysql2 (0.2.6)
+    phpass-ruby (0.1.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   mysql2
+  phpass-ruby
