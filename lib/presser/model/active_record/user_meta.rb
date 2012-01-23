@@ -2,7 +2,8 @@ module Presser
   module ActiveRecord
     class UserMeta < Base
       set_table_name "usermetas"
-      set_primary_key "umeta_id"
+      self.primary_key = "umeta_id"
+
       belongs_to :user
       validates_presence_of :meta_key
     end

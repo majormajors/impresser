@@ -1,7 +1,8 @@
 module Presser
   module ActiveRecord
     class Comment < Base
-      set_primary_key "comment_ID"
+      self.primary_key = "comment_ID"
+
       belongs_to :post, :foreign_key => "comment_post_ID"
       has_many :comments, :foreign_key => "comment_parent"
       belongs_to :comment, :foreign_key => "comment_parent"

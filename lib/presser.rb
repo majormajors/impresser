@@ -1,6 +1,7 @@
 $: << File.expand_path(File.dirname(__FILE__))
 
 require "presser/exceptions"
+require "presser/authenticate"
 
 module Presser
   Config = {

@@ -2,7 +2,8 @@ module Presser
   module ActiveRecord
     class PostMeta < Base
       set_table_name "postmeta"
-      set_primary_key "meta_id"
+      self.primary_key = "meta_id"
+
       belongs_to :post, :class_name => "PostBase"
       validates_presence_of :meta_key
     end
