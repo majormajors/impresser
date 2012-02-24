@@ -1,5 +1,6 @@
 $: << File.expand_path(File.dirname(__FILE__))
 
+require "presser/version"
 require "presser/exceptions"
 require "presser/authenticate"
 
