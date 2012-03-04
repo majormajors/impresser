@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'presser/model/active_record'
+require 'presser/active_record'
 
 describe Presser::ActiveRecord::Base do
   before :all do
