@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Matt Mayers"]
   s.email       = ["matt@mattmayers.com"]
   s.homepage    = "http://mattmayers.com"
-  s.summary     = %q{Presser rubifies your Wordpress }
+  s.summary     = %q{Presser rubifies your Wordpress}
   s.description = %q{Presser is for those who want to marry their love of Wordpress with their lust for Ruby.}
 
   s.rubyforge_project = "presser"
@@ -21,6 +21,12 @@ Gem::Specification.new do |s|
   # specify any dependencies here; for example:
   s.add_development_dependency "rspec"
   s.add_development_dependency "rake"
+  case RUBY_VERSION
+  when /^1\.9/
+    s.add_development_dependency "ruby-debug19"
+  else
+    s.add_development_dependency "ruby-debug"
+  end
   s.add_runtime_dependency "mysql2"
   s.add_runtime_dependency "phpass-ruby"
   s.add_runtime_dependency "composite_primary_keys"
