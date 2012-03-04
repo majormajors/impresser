@@ -5,16 +5,24 @@ require "presser/exceptions"
 require "presser/authenticate"
 
 module Presser
+  MODEL_NAMES = %w(comment comment_meta link option post_base post page post_meta term term_relationship term_taxonomy user user_meta).freeze
+
   Config = {
     :table_name_prefix => "wp_",
     :repository => :default,
     :connect => Hash.new
   }
 
-  def self.setup(options={})
+  def self.setup(orm=:active_record, options={})
     Config.merge!(options)
-    require "presser/model"
+    require "presser/#{orm}"
+    self.load_models_for(orm)
+  end
+  
+  # Loads data models for the specified ORM
+  #
+  # @param [String] orm The ORM for which you want to load models
+  def self.load_models_for(orm)
+    MODEL_NAMES.each{ |model| require File.join("presser", "model", orm.to_s, model) }
   end
 end
-
-require "presser/railtie" if defined? ::Rails
