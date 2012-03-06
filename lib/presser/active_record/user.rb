@@ -1,3 +1,5 @@
+require "presser/mixin/authenticate"
+
 module Presser
   module ActiveRecord
     class User < Base
