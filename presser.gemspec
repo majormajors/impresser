@@ -21,6 +21,8 @@ Gem::Specification.new do |s|
   # specify any dependencies here; for example:
   s.add_development_dependency "rspec"
   s.add_development_dependency "rake"
+  s.add_development_dependency "rspec-rails"
+  s.add_development_dependency "activerecord"
   case RUBY_VERSION
   when /^1\.9/
     s.add_development_dependency "ruby-debug19"
