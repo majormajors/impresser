@@ -1,3 +1,5 @@
+require 'phpass'
+
 module Presser
   module Authenticate
     def self.included(base)
@@ -7,7 +9,7 @@ module Presser
 
     module ClassMethods
       def find_user_for_authentication(login)
-        raise Presser::NotImplemented, "Your User class must implement the find_user_for_authentication method"
+        raise NotImplementedError, "Your User class must implement the find_user_for_authentication method"
       end
 
       def hasher
