@@ -8,7 +8,11 @@ module Impresser
       has_many :comments, :foreign_key => "comment_parent"
       belongs_to :comment, :foreign_key => "comment_parent"
       belongs_to :user
-      has_many :comment_metas
+      has_many :metas, :class_name => "CommentMeta" do
+        def [](key)
+          self.where(:meta_key => key).first.try(:meta_value)
+        end
+      end
       validates_presence_of :comment_author, :comment_author_email, :comment_author_IP, :comment_content
     end
   end
