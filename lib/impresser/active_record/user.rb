@@ -1,9 +1,9 @@
-require "presser/mixin/authenticate"
+require "impresser/mixin/authenticate"
 
-module Presser
+module Impresser
   module ActiveRecord
     class User < Base
-      include Presser::Authenticate
+      include Impresser::Authenticate
 
       self.primary_key = "ID"
 

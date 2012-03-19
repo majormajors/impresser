@@ -1,4 +1,4 @@
-module Presser
+module Impresser
   module ActiveRecord
     class Post < PostBase
       def generate_guid

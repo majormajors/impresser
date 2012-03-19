@@ -1,4 +1,4 @@
-module Presser
+module Impresser
   module ActiveRecord
     class Media < PostBase
     

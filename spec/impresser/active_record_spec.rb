@@ -1,15 +1,15 @@
 require 'spec_helper'
-require 'presser/active_record'
+require 'impresser/active_record'
 
-describe Presser::ActiveRecord::Base do
+describe Impresser::ActiveRecord::Base do
   before :all do
-    Presser::ActiveRecord::Base.table_name_prefix = 'test_'
-    Widget = Class.new(Presser::ActiveRecord::Base)
+    Impresser::ActiveRecord::Base.table_name_prefix = 'test_'
+    Widget = Class.new(Impresser::ActiveRecord::Base)
   end
 
   describe "#full_table_name_prefix" do
     it "returns, for the parent class, the table_name_prefix we set" do
-      Presser::ActiveRecord::Base.table_name_prefix.should == 'test_'
+      Impresser::ActiveRecord::Base.table_name_prefix.should == 'test_'
     end
 
     it "returns, for the child class, the table_name_prefix we set" do

@@ -1,4 +1,4 @@
-module Presser
+module Impresser
   module ActiveRecord
     class Term < Base
       self.primary_key = "term_id"

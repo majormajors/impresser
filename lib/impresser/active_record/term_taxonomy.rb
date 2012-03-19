@@ -1,4 +1,4 @@
-module Presser
+module Impresser
   module ActiveRecord
     class TermTaxonomy < Base
       set_table_name "term_taxonomy"

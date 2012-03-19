@@ -1,4 +1,4 @@
-module Presser
+module Impresser
   module ActiveRecord
     class Link < Base
       self.primary_key = "link_id"

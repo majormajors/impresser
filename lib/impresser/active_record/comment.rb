@@ -1,4 +1,4 @@
-module Presser
+module Impresser
   module ActiveRecord
     class Comment < Base
       self.primary_key = "comment_ID"

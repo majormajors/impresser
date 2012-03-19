@@ -1,4 +1,4 @@
-module Presser
+module Impresser
   module ActiveRecord
     class UserMeta < Base
       set_table_name "usermetas"

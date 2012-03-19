@@ -1,17 +1,17 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "presser/version"
+require "impresser/version"
 
 Gem::Specification.new do |s|
-  s.name        = "presser"
-  s.version     = Presser::VERSION
+  s.name        = "impresser"
+  s.version     = Impresser::VERSION
   s.authors     = ["Matt Mayers"]
   s.email       = ["matt@mattmayers.com"]
   s.homepage    = "http://mattmayers.com"
-  s.summary     = %q{Presser rubifies your Wordpress}
-  s.description = %q{Presser is for those who want to marry their love of Wordpress with their lust for Ruby.}
+  s.summary     = %q{Impresser rubifies your Wordpress}
+  s.description = %q{Impresser is for those who want to marry their love of Wordpress with their lust for Ruby.}
 
-  s.rubyforge_project = "presser"
+  s.rubyforge_project = "impresser"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

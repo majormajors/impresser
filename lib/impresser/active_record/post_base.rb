@@ -1,4 +1,4 @@
-module Presser
+module Impresser
   module ActiveRecord
     class PostBase < Base
       set_table_name "posts"

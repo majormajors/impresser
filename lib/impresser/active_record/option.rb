@@ -1,4 +1,4 @@
-module Presser
+module Impresser
   module ActiveRecord
     class Option < Base
       self.primary_key = "option_id"

@@ -1,6 +1,6 @@
-= presser
+= impresser
 
-Presser gives your rubies the game they need to hook up with your Wordpress.
+Impresser gives your rubies the game they need to hook up with your Wordpress.
 
 == TODO: write more stuff
 

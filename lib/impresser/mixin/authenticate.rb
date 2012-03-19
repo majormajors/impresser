@@ -1,6 +1,6 @@
 require 'phpass'
 
-module Presser
+module Impresser
   module Authenticate
     def self.included(base)
       base.extend(ClassMethods)

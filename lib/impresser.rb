@@ -1,7 +1,7 @@
-require "presser/version"
-require "presser/exceptions"
+require "impresser/version"
+require "impresser/exceptions"
 
-module Presser
+module Impresser
   MODEL_NAMES = %w(comment comment_meta link option post_base post page post_meta term term_relationship term_taxonomy user user_meta).freeze
 
   Config = {
@@ -11,7 +11,7 @@ module Presser
 
   def self.setup(orm=:active_record, options={})
     Config.merge!(options)
-    require "presser/#{orm}"
+    require "impresser/#{orm}"
     self.load_models_for(orm)
   end
   
@@ -19,6 +19,6 @@ module Presser
   #
   # @param [String] orm The ORM for which you want to load models
   def self.load_models_for(orm)
-    MODEL_NAMES.each{ |model| require File.join("presser", "model", orm.to_s, model) }
+    MODEL_NAMES.each{ |model| require File.join("impresser", "model", orm.to_s, model) }
   end
 end

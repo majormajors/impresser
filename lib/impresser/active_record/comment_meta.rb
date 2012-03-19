@@ -1,4 +1,4 @@
-module Presser
+module Impresser
   module ActiveRecord
     class CommentMeta < Base
       set_table_name "commentmeta"

@@ -1,4 +1,4 @@
-module Presser
+module Impresser
   module ActiveRecord
     class Page < PostBase
       has_many :pages, :foreign_key => "post_parent"

@@ -1,4 +1,4 @@
-module Presser
+module Impresser
   module ActiveRecord
     class TermRelationship < Base
       belongs_to :term_taxonomy

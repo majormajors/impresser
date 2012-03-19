@@ -1,7 +1,7 @@
 require 'spec_helper'
-require 'presser/mixin/authenticate'
+require 'impresser/mixin/authenticate'
 
-describe Presser::Authenticate do
+describe Impresser::Authenticate do
   before(:each) do
     hashed_password = '$P$BkgreYPfZOYNFX.V9IdMLcaBampElR1'
     @user = mock('User', :login => 'gooduser', :hashed_password => hashed_password)
@@ -11,7 +11,7 @@ describe Presser::Authenticate do
 
   before(:all) do
     @klass = Class.new
-    @klass.__send__(:include, Presser::Authenticate)
+    @klass.__send__(:include, Impresser::Authenticate)
   end
 
   context "find_user_for_authentication has not been implemented" do

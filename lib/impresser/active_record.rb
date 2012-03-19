@@ -1,6 +1,6 @@
 require 'active_record'
 
-module Presser
+module Impresser
   module ActiveRecord
     class Base < ::ActiveRecord::Base
       self.abstract_class = true
