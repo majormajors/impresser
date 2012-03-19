@@ -1,18 +1,18 @@
-= impresser
+# impresser
 
 Impresser gives your rubies the game they need to hook up with your Wordpress.
 
-== Usage
+## Usage
 
 Add the following to your Gemfile.
 
-```
+```ruby
 gem "impresser"
 ```
 
 Then, create an initializer named `config/initializers/impresser.rb`
 
-```
+```ruby
 Impresser.setup(:active_record, :connect => {
   :adapter  => "mysql2",
   :encoding => "utf8",
@@ -33,6 +33,14 @@ Impresser.setup(:active_record, :connect => {
 
 Only ActiveRecord is supported now, but I want to support DataMapper and Sequel in future versions.
 
-== Copyright
+## Todo
+
+* Better test coverage
+* Better support for dealing with file attachments; perhaps integration with paperclip?
+* More seamless configuration with the option to fine-tune it where needed
+* DataMapper support
+* Sequel support
+
+## Copyright
 
 Copyright (c) 2012 Matt Mayers. See LICENSE for details.
