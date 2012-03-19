@@ -2,7 +2,7 @@ require "impresser/version"
 require "impresser/exceptions"
 
 module Impresser
-  MODEL_NAMES = %w(comment comment_meta link option post_base post page post_meta term term_relationship term_taxonomy user user_meta).freeze
+  MODEL_NAMES = %w(post_base attachment comment comment_meta link option post page post_meta term term_relationship term_taxonomy user user_meta).freeze
 
   Config = {
     :table_name_prefix => "wp_",
