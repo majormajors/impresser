@@ -1,5 +1,7 @@
 # impresser
 
+[![Build Status](https://secure.travis-ci.org/majormajors/impresser.png)](http://travis-ci.org/majormajors/impresser)
+
 Impresser gives your rubies the game they need to hook up with your Wordpress.
 
 ## Usage
