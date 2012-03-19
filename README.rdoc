@@ -2,8 +2,37 @@
 
 Impresser gives your rubies the game they need to hook up with your Wordpress.
 
-== TODO: write more stuff
+== Usage
+
+Add the following to your Gemfile.
+
+```
+gem "impresser"
+```
+
+Then, create an initializer named `config/initializers/impresser.rb`
+
+```
+Impresser.setup(:active_record, :connect => {
+  :adapter  => "mysql2",
+  :encoding => "utf8",
+  :host     => "localhost",
+  :port     => 3306,
+  :database => "db_name",
+  :username => "db_user",
+  :password => "db_pass"
+}
+
+# This line is optional, but you can uncomment it if you want to
+# pull the models into the global namespace. Don't do this if you
+# have models that would cause naming conflicts with the Impresser
+# models.
+#
+# include Impresser::ActiveRecord
+```
+
+Only ActiveRecord is supported now, but I want to support DataMapper and Sequel in future versions.
 
 == Copyright
 
-Copyright (c) 2010 Matt Mayers. See LICENSE for details.
+Copyright (c) 2012 Matt Mayers. See LICENSE for details.
