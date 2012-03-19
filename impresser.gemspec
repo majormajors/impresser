@@ -25,7 +25,12 @@ Gem::Specification.new do |s|
   s.add_development_dependency "activerecord", ">= 3.0.0"
   s.add_development_dependency "guard"
   s.add_development_dependency "guard-rspec"
-  s.add_runtime_dependency "mysql2"
+  case RUBY_ENGINE
+  when /jruby/
+    s.add_runtime_dependency "jdbc-mysql"
+  else
+    s.add_runtime_dependency "mysql2"
+  end
   s.add_runtime_dependency "phpass-ruby"
   s.add_runtime_dependency "composite_primary_keys"
   s.add_runtime_dependency "php_serialize"
