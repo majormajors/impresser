@@ -25,8 +25,8 @@ Gem::Specification.new do |s|
   s.add_development_dependency "activerecord", ">= 3.0.0"
   s.add_development_dependency "guard"
   s.add_development_dependency "guard-rspec"
-  case RUBY_ENGINE
-  when /jruby/
+  case RUBY_PLATFORM
+  when 'java'
     s.add_runtime_dependency "jdbc-mysql"
   else
     s.add_runtime_dependency "mysql2"
