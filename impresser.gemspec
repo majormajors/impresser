@@ -35,4 +35,5 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "mysql2"
   s.add_runtime_dependency "phpass-ruby"
   s.add_runtime_dependency "composite_primary_keys"
+  s.add_runtime_dependency "php_serialize"
 end

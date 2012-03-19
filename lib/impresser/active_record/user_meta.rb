@@ -1,7 +1,13 @@
+require 'impresser/mixin/serialization_helper'
+
 module Impresser
   module ActiveRecord
     class UserMeta < Base
-      self.table_name = with_prefix("usermetas")
+      extend Impresser::SerializationHelper
+
+      php_serializable :meta_value
+
+      self.table_name = with_prefix("usermeta")
       self.primary_key = "umeta_id"
 
       belongs_to :user
