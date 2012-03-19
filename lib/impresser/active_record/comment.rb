@@ -1,6 +1,7 @@
 module Impresser
   module ActiveRecord
     class Comment < Base
+      self.table_name = with_prefix("comments")
       self.primary_key = "comment_ID"
 
       belongs_to :post, :foreign_key => "comment_post_ID"

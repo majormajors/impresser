@@ -1,6 +1,7 @@
 module Impresser
   module ActiveRecord
     class Option < Base
+      self.table_name = with_prefix("options")
       self.primary_key = "option_id"
 
       validates_presence_of :option_name

@@ -1,7 +1,7 @@
 module Impresser
   module ActiveRecord
     class TermTaxonomy < Base
-      set_table_name "term_taxonomy"
+      self.table_name = with_prefix("term_taxonomy")
       self.primary_key = "term_taxonomy_id"
 
       belongs_to :term

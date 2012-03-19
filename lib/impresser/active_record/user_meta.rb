@@ -1,7 +1,7 @@
 module Impresser
   module ActiveRecord
     class UserMeta < Base
-      set_table_name "usermetas"
+      self.table_name = with_prefix("usermetas")
       self.primary_key = "umeta_id"
 
       belongs_to :user

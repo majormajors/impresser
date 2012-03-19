@@ -1,7 +1,7 @@
 module Impresser
   module ActiveRecord
     class PostMeta < Base
-      set_table_name "postmeta"
+      self.table_name = with_prefix("postmeta")
       self.primary_key = "meta_id"
 
       belongs_to :post, :class_name => "PostBase"

@@ -1,7 +1,7 @@
 module Impresser
   module ActiveRecord
     class PostBase < Base
-      set_table_name "posts"
+      self.table_name = with_prefix("posts")
       self.primary_key = "ID"
 
       set_inheritance_column "post_type"

@@ -1,6 +1,7 @@
 module Impresser
   module ActiveRecord
     class Link < Base
+      self.table_name = with_prefix("links")
       self.primary_key = "link_id"
 
       belongs_to :user, :foreign_key => "link_owner"

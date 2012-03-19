@@ -19,6 +19,6 @@ module Impresser
   #
   # @param [String] orm The ORM for which you want to load models
   def self.load_models_for(orm)
-    MODEL_NAMES.each{ |model| require File.join("impresser", "model", orm.to_s, model) }
+    MODEL_NAMES.each{ |model| require File.join("impresser", orm.to_s, model) }
   end
 end

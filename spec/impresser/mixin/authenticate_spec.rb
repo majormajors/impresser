@@ -4,7 +4,7 @@ require 'impresser/mixin/authenticate'
 describe Impresser::Authenticate do
   before(:each) do
     hashed_password = '$P$BkgreYPfZOYNFX.V9IdMLcaBampElR1'
-    @user = mock('User', :login => 'gooduser', :hashed_password => hashed_password)
+    @user = mock('User', :login => 'gooduser', :user_pass => hashed_password)
     @good_password = 'abc123'
     @bad_password = 'abc456'
   end

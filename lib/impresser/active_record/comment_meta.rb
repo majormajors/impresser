@@ -1,7 +1,7 @@
 module Impresser
   module ActiveRecord
     class CommentMeta < Base
-      set_table_name "commentmeta"
+      self.table_name = with_prefix("commentmeta")
       self.primary_key = "meta_id"
 
       belongs_to :comment

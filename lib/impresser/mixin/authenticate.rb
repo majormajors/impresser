@@ -18,7 +18,7 @@ module Impresser
 
       def authenticate(login, password)
         user = find_user_for_authentication(login)
-        if user && hasher.check(password, user.hashed_password)
+        if user && hasher.check(password, user.user_pass)
           return user
         else
           return nil
@@ -27,6 +27,13 @@ module Impresser
     end
 
     module InstanceMethods
+      def hasher
+        self.class.hasher
+      end
+
+      def hash_password(plain_password)
+        hasher.hash(plain_password)
+      end
     end
   end
 end
