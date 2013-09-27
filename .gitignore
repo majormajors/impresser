@@ -6,3 +6,6 @@ pkg/*
 .DS_Store
 .rvmrc
 .rbenv-version
+
+/doc
+/.yardoc
