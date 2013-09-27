@@ -7,6 +7,10 @@ describe Impresser::ActiveRecord::Base do
     Widget = Class.new(Impresser::ActiveRecord::Base)
   end
 
+  after :all do
+    Impresser::Config[:table_name_prefix] = 'wp_'
+  end
+
   describe ".with_prefix" do
     it "concats the table name prefix with the table name" do
       Impresser::ActiveRecord::Base.send(:with_prefix, "abc").should == "test_abc"

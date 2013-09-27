@@ -4,7 +4,7 @@ require 'impresser/mixin/authenticate'
 describe Impresser::Authenticate do
   before(:each) do
     hashed_password = '$P$BkgreYPfZOYNFX.V9IdMLcaBampElR1'
-    @user = mock('User', :login => 'gooduser', :user_pass => hashed_password)
+    @user = double('User', :login => 'gooduser', :user_pass => hashed_password)
     @good_password = 'abc123'
     @bad_password = 'abc456'
   end
@@ -28,7 +28,7 @@ describe Impresser::Authenticate do
     end
 
     describe ".authenticate" do
-      it{ lambda{ @klass.authenticate('abc', '123') }.should_not raise_error(NotImplementedError) }
+      it{ lambda{ @klass.authenticate('abc', '123') }.should_not raise_error }
 
       it "returns the user object when the username and password are good" do
         @klass.authenticate('gooduser', @good_password).should == @user
